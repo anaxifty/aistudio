@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL ARCADE - Retro Gaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-container">
+        <header class="site-header">
+            <div class="logo">
+                <h1>PIXEL ARCADE<span class="cursor">_</span></h1>
+            </div>
+            <button id="muteToggle" class="mute-btn" aria-label="Toggle mute all">
+                <span class="mute-icon">🔊</span>
+                <span class="mute-text">MUTE ALL</span>
+            </button>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="SEARCH GAMES..." autocomplete="off">
+        </div>
+
+        <main class="game-grid" id="gameGrid">
+            <!-- Game cards will be inserted here by main.js -->
+        </main>
+    </div>
+
+    <div id="gameModal" class="game-modal" hidden>
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button id="exitBtn" class="exit-btn" aria-label="Exit game">
+                <span>✕</span>
+                <span class="exit-text">EXIT</span>
+            </button>
+            <iframe id="gameFrame" class="game-frame" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
